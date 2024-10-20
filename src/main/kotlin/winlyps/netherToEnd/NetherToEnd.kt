@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin
 class NetherToEnd : JavaPlugin() {
 
     override fun onEnable() {
-        // Plugin startup logic
+        server.pluginManager.registerEvents(NetherToEndEventListener(this), this)
     }
 
     override fun onDisable() {
